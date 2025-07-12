@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+    <div class="cloud cloud4"></div>
+    
+    <div class="auth-container">
+        <div class="tabs">
+            <div class="tab active" onclick="openTab('login')">ورود</div>
+            <div class="tab" onclick="openTab('register')">ثبت نام</div>
+            <div class="tab" onclick="openTab('forgot')">فراموشی رمز</div>
+        </div>
+        
+        <div id="login" class="tab-content active">
+            <h2>ورود به حساب کاربری</h2>
+            <form>
+                <div class="input-group">
+                    <input type="text" id="username" placeholder=" " required>
+                    <label for="username">نام کاربری یا ایمیل</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder=" " required>
+                    <label for="password">رمز عبور</label>
+                </div>
+                <button type="submit">ورود</button>
+                <div class="note">
+                    رمز خود را فراموش کرده‌اید؟ <a href="#" onclick="openTab('forgot'); return false;">بازیابی رمز</a>
+                </div>
+            </form>
+        </div>
+        
+        <div id="register" class="tab-content">
+            <h2>ثبت نام کاربر جدید</h2>
+            <form>
+                <div class="input-group">
+                    <input type="text" id="reg-username" placeholder=" " required>
+                    <label for="reg-username">نام کاربری</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="reg-email" placeholder=" " required>
+                    <label for="reg-email">آدرس ایمیل</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="reg-password" placeholder=" " required>
+                    <label for="reg-password">رمز عبور</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="reg-confirm" placeholder=" " required>
+                    <label for="reg-confirm">تکرار رمز عبور</label>
+                </div>
+                <button type="submit">ثبت نام</button>
+                <div class="note">
+                    قبلاً ثبت نام کرده‌اید؟ <a href="#" onclick="openTab('login'); return false;">ورود به حساب</a>
+                </div>
+            </form>
+        </div>
+        
+        <div id="forgot" class="tab-content">
+            <h2>بازیابی رمز عبور</h2>
+            <form>
+                <div class="input-group">
+                    <input type="email" id="forgot-email" placeholder=" " required>
+                    <label for="forgot-email">آدرس ایمیل</label>
+                </div>
+                <button type="submit">ارسال لینک بازیابی</button>
+                <div class="note">
+                    <a href="#" onclick="openTab('login'); return false;">بازگشت به صفحه ورود</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
